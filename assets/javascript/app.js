@@ -70,105 +70,107 @@ $(document).ready(function() {
 
 	var trivia = {
 
-		questions: ['Who was the host for Kitchen Kabaret?',
+		questions: ['Which company built the ill-fated Comet?
+',
 
-								'Who starred in the title role of Condorman?',
+								'Which of the following does not belong?',
 
-								'In Captain EO, what is the name of the elephant like alien?',
+								'Who was primarily responsible for the design and development of the Constellation?',
 
-								'The 1980\'s were big for new personal computer introductions. Which of the following computers was introduced in 1980?',
+								'Which Convair model was the company's last entry in the commercial airliner market?',
 
-								'What country was welcomed into the World Showcase at EPCOT Center in 1984?',
+								'Which passenger plane was never used as Air Force One?',
 
-								'In 1981 a Disney constructed WED-Way People Mover opened at which airport?',
+								'For which of the following is the colloquial term "jumbo jet" often used?',
 
-								'What school is attended in the Disney Channel Series, Girl Meets World?',
+								'What was the designation of the four-engine jet airliner being produced by Airbus prior to the A380?',
 
-								'Which Walt Disney World location opened on the same day as the Disney-MGM Studios theme park on May 1, 1989?',
+								'Before Boeing introduced its long-haul 747-400 series, a smaller version of the 747 was built that had a range of almost 7,000 miles. What was the designation of this popular 'mini-jumbo'?
+',
 
-								'Which of the following films is NOT part of the Walt Disney Studios Silly Symphonies?',
+								'During the 1950s turboprop aircraft made up a large portion of the commercial airliner fleet. Which of the following was not a turboprop?',
 
-								'Which wartime activity did the Walt Disney Studios partake in to support the American war effort?'],
+								'What was the designation of the airplane built by Boeing for service in the fabled Clipper fleet?'],
 
-		q1: ['A. Fud Wrapper',
+		q1: ['A. Hawker Siddely',
 
-				 'B. Cookie Ann Milk',
+				 'B. Vickers',
 
-				 'C. Bonnie Appetit',
+				 'C. Handley Page',
 
-				 'D. Cherry Ontop'],
+				 'D. De Havelland'],
 
-		q2: ['A. Zac Efron',
+		q2: ['A. DC-4',
 
-				 'B. Michael Crawford',
+				 'B. DC-5',
 
-				 'C. Billy Crystal',
+				 'C. DC-6',
 
-				 'D. Michael Keaton'],
+				 'D. DC-7'],
 
-		q3: ['A. Trunks',
+		q3: ['A. Howard Hughes',
 
-				 'B. Hooter',
+				 'B. Glenn Martin',
 
-				 'C. Elle',
+				 'C. Malcolm Loughhead',
 
-				 'D. Odie'],
+				 'D. Juan Trippe'],
 
-		q4: ['A. Sinclair ZX80',
+		q4: ['A. 340',
 
-				 'B. IBM PC',
+				 'B. 880',
 
-				 'C. Commodore 64',
+				 'C. 990',
 
-				 'D. Atari 2600'],
+				 'D. 240'],
 
-		q5: ['A. Norway',
+		q5: ['A. Douglas DC-6',
 
-				 'B. Morocco',
+				 'B. Boeing 707',
 
-				 'C. France',
+				 'C. Lockheed Constellation',
 
-				 'D. Japan'],
+				 'D. Douglas DC-7'],
 
-		q6: ['A. Houston Intercontinental Airport',
+		q6: ['A. Boeing 747',
 
-				 'B. Orlando International Airport',
+				 'B. Lockheed L-1011',
 
-				 'C. Atlanta International Airport',
+				 'C. McDonnell Douglas MD-11',
 
-				 'D. Dallas/Ft. Worth International Airport'],
+				 'D. Douglas DC-10'],
 
-		q7: ['A. Vintage High School',
+		q7: ['A. A-340',
 
-				 'B. Peyton Middle School',
+				 'B. A-350',
 
-				 'C. John Quincy Adams Middle School',
+				 'C. A-320',
 
-				 'D. Washington High School'],
+				 'D. A-321'],
 
-		q8: ['A. Typhoon Lagoon',
+		q8: ['A. 747-250',
 
-				 'B. Pleasure Island',
+				 'B. 747-SB',
 
-				 'C. Both A & B',
+				 'C. 747-SP',
 
-				 'D. None of the above'],
+				 'D. 747-200'],
 
-		q9: ['A. The Night Before Christmas',
+		q9: ['A. Martin 404',
 
-				 'B. Three Little Pigs',
+				 'B. Vickers Viscount',
 
-				 'C. The Old Mill',
+				 'C. Lockheed Electra II',
 
-				 'D. The Gallopin\' Gaucho'],
+				 'D. Bristol Brittania'],
 
-		q10: ['A. Recycling used film footage',
+		q10: ['A. 307',
 
-				  'B. Designing US Army & US Navy insignia',
+				  'B. 314',
 
-				  'C. Hosted a Studio Victory Garden where employees grew food for their families',
+				  'C. 377',
 
-				  'D. Forced employees to carpool by closing parking lots to non-carpool cars']		 						
+				  'D. 214']		 						
 
 	}
 
@@ -180,19 +182,19 @@ var wrong = 0;
 
 var q1 = {
 
-	question : 'Who was the host for Kitchen Kabaret?',
+	question : 'Which company built the ill fated Comet?',
 
-	possibleAnswers : ['A. Fud Wrapper',
+	possibleAnswers : ['A. Hawker Siddeley',
 
-				 'B. Cookie Ann Milk',
+				 'B. Vickers',
 
-				 'C. Bonnie Appetit',
+				 'C. Handley Page',
 
-				 'D. Cherry Ontop'],
+				 'D. De Havelland'],
 
-	flags : [false, false, true, false],
+	flags : [false, false, false, true],
 
-	answer : 'C. Bonnie Appetit'
+	answer : 'D. De Havelland'
 
 };
 
@@ -200,19 +202,19 @@ var q1 = {
 
 var q2 = {
 
-	question: 'Who starred in the title role of Condorman?',
+	question: 'Which of the following does not belong?',
 
-	possibleAnswers: ['A. Zac Efron',
+	possibleAnswers: ['A. DC-4',
 
-				 'B. Michael Crawford',
+				 'B. DC-5',
 
-				 'C. Billy Crystal',
+				 'C. DC-6',
 
-				 'D. Michael Keaton'],
+				 'D. DC-7'],
 
 	flags : [false, true, false, false],
 
-	answer : 'B. Michael Crawford'
+	answer : 'B. DC-5'
 
 };
 
@@ -220,19 +222,19 @@ var q2 = {
 
 var q3 = {
 
-	question : 'In Captain EO, what is the name of the elephant like alien?',
+	question : 'Who was primarily responsible for the design and development of the Constellation?',
 
-	possibleAnswers : ['A. Trunks',
+	possibleAnswers : ['A. Howard Hughes',
 
-				 'B. Hooter',
+	'B. Glenn Martin',
 
-				 'C. Elle',
+	'C. Malcolm Loughhead',
 
-				 'D. Odie'],
+	'D. Juan Trippe'],
 
-	flags : [false, true, false, false],
+	flags : [true, false, false, false],
 
-	answer : 'B. Hooter'
+	answer : 'A. Howard Hughes'
 
 };
 
@@ -240,19 +242,19 @@ var q3 = {
 
 var q4 = {
 
-	question : 'The 1980\'s were big for new personal computer introductions. Which of the following computers was introduced in 1980?',
+	question : 'Which Convair model was the companys last entry in the commercial airliner market?',
 
-	possibleAnswers : ['A. Sinclair ZX80',
+	possibleAnswers : ['A. 340',
 
-				 'B. IBM PC',
+	'B. 880',
 
-				 'C. Commodore 64',
+	'C. 990',
 
-				 'D. Atari 2600'],
+	'D. 240'],
 
-	flags : [true, false, false, false],
+	flags : [false, false, true, false],
 
-	answer : 'A. Sinclair ZX80'
+	answer : 'C. 990'
 
 };
 
@@ -260,19 +262,19 @@ var q4 = {
 
 var q5 = {
 
-	question : 'What country was welcomed into the World Showcase at EPCOT Center in 1984?',
+	question : 'Which passenger plane was never used as Air Force One?',
 
-	possibleAnswers : ['A. Norway',
+	possibleAnswers : ['A. Douglas DC-6',
 
-				 'B. Morocco',
+	'B. Boeing 707',
 
-				 'C. France',
+	'C. Lockheed Constellation',
 
-				 'D. Japan'],
+	'D. Douglas DC-7'],
 
-	flags : [false, true, false, false],
+	flags : [false, false, false, true],
 
-	answer : 'B. Morocco'
+	answer : 'D. Douglas DC-7'
 
 };
 
@@ -280,19 +282,18 @@ var q5 = {
 
 var q6 = {
 
-	question : 'In 1981 a Disney constructed WED-Way People Mover opened at which airport?',
+	question : 'For which of the following is the colloquial term "jumbo jet" often used?',
 
-	possibleAnswers : ['A. Houston Intercontinental Airport',
+	possibleAnswers : ['A. Boeing 747',
 
-				 'B. Orlando International Airport',
+	'B. Lockheed L-1011',
 
-				 'C. Atlanta International Airport',
+	'C. McDonnell Douglas MD-11',
 
-				 'D. Dallas/Ft. Worth International Airport'],
-
+	'D. Douglas DC-10'],
 	flags : [true, false, false, false],
 
-	answer : 'A. Houston Intercontinental Airport'
+	answer : 'A. Boeing 747'
 
 };
 
@@ -300,19 +301,19 @@ var q6 = {
 
 var q7 = {
 
-	question : 'What school is attended in the Disney Channel Series, Girl Meets World?',
+	question : 'What was the designation of the four-engine jet airliner being produced by Airbus prior to the A380?',
 
-	possibleAnswers : ['A. Vintage High School',
+	possibleAnswers : ['A. A-340',
 
-				 'B. Peyton Middle School',
+	'B. A-350',
 
-				 'C. John Quincy Adams Middle School',
+	'C. A-320',
 
-				 'D. Washington High School'],
+	'D. A-321'],
 
-	flags : [false, false, true, false],
+	flags : [true, false, false, false],
 
-	answer : 'C. John Quincy Adams Middle School'
+	answer : 'A. A-340'
 
 };
 
@@ -320,19 +321,19 @@ var q7 = {
 
 var q8 = {
 
-	question : 'Which Walt Disney World location opened on the same day as the Disney-MGM Studios theme park on May 1, 1989?',
+	question : 'Before Boeing introduced its long-haul 747-400 series, a smaller version of the 747 was built that had a range of almost 7,000 miles. What was the designation of this popular mini-jumbo?',
+	
 
-	possibleAnswers : ['A. Typhoon Lagoon',
+	possibleAnswers : ['A. 747-250',
 
-				 'B. Pleasure Island',
+	'B. 747-SB',
 
-				 'C. Both A & B',
+	'C. 747-SP',
 
-				 'D. None of the above'],
+	'D. 747-200'],
+	flags : [false, false, true, false],
 
-	flags : [false, true, false, false],
-
-	answer : 'B. Pleasure Island'
+	answer : 'C. 747-SP'
 
 };
 
@@ -340,19 +341,19 @@ var q8 = {
 
 var q9 = {
 
-	question : 'Which of the following films is NOT part of the Walt Disney Studios Silly Symphonies?',
+	question : 'During the 1950s turboprop aircraft made up a large portion of the commercial airliner fleet. Which of the following was not a turboprop?',
 
-	possibleAnswers : ['A. The Night Before Christmas',
+	possibleAnswers : ['A. Martin 404',
 
-				 'B. Three Little Pigs',
+	'B. Vickers Viscount',
 
-				 'C. The Old Mill',
+	'C. Lockheed Electra II',
 
-				 'D. The Gallopin\' Gaucho'],
+	'D. Bristol Brittania'],
 
-	flags : [false, false, false, true],
+	flags : [true, false, false, false],
 
-	answer : 'D. The Gallopin\' Gaucho'
+	answer : 'A. Martin 404'
 
 };
 
@@ -360,19 +361,19 @@ var q9 = {
 
 var q10 = {
 
-	question : 'Which wartime activity did the Walt Disney Studios partake in to support the American war effort?',
+	question : 'What was the designation of the airplane built by Boeing for service in the fabled Clipper fleet?',
 
-	possibleAnswers : ['A. Recycling used film footage',
+	possibleAnswers : ['A. 307',
 
-				  'B. Designing US Army & US Navy insignia',
+	'B. 314',
 
-				  'C. Hosted a Studio Victory Garden where employees grew food for their families',
+	'C. 377',
 
-				  'D. Forced employees to carpool by closing parking lots to non-carpool cars'],
+	'D. 214'],	
 
 	flags : [false, true, false, false],
 
-	answer : 'B. Designing US Army & US Navy insignia'
+	answer : 'B. 314'
 
 }
 
