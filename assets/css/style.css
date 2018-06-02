@@ -4,11 +4,9 @@ body {
 
 }
 
-
-
 button {
 
-	width: 80%;
+	width: 30%;
 
 	height: 40px;
 
@@ -18,25 +16,11 @@ button {
 
 }
 
-
-
 button.answerchoice {
 
 	display: none;
 
 }
-
-
-
-button:hover {
-
-	background-color: blue;
-
-	color: white;
-
-}
-
-
 
 .answers div {
 
@@ -44,17 +28,13 @@ button:hover {
 
 }
 
-
-
 img {
 
-	height: 200px;
+	height: 250px;
 
 	width: auto;
 
 }
-
-
 
 h1, h2, h3, .question {
 

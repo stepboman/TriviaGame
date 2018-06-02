@@ -4,13 +4,13 @@ $(document).ready(function() {
 
 	var countdownTimer = {
 
-		time : 30,
+		time : 15,
 
 		reset: function() {
 
-			this.time = 30;
+			this.time = 15;
 
-			$('.timer').html('<h3>' + this.time + ' seconds remaining</h3>');
+			$('.timer').html('<h3>' + this.time + 'remaining</h3>');
 
 		},
 
@@ -28,15 +28,11 @@ $(document).ready(function() {
 
 		count: function() {
 
-				countdownTimer.time--;
-
-				console.log(countdownTimer.time);
-
-//				$('.timer').html(countdownTimer.time);
+				countdownTimer.time--;		
 
 			if (countdownTimer.time >= 0) {
 
-				$('.timer').html('<h3>' + countdownTimer.time + ' seconds remaining</h3>');
+				$('.timer').html('<h3>' + countdownTimer.time + 'remaining</h3>');
 
 			}
 
@@ -54,7 +50,7 @@ $(document).ready(function() {
 
 				} else {
 
-					$(".answerchoice").hide();
+					$(".answer").hide();
 
 					showScore();
 
@@ -65,116 +61,6 @@ $(document).ready(function() {
 		}
 
 	};
-
-/*
-
-	var trivia = {
-
-		questions: ['Which company built the ill-fated Comet?
-',
-
-								'Which of the following does not belong?',
-
-								'Who was primarily responsible for the design and development of the Constellation?',
-
-								'Which Convair model was the company's last entry in the commercial airliner market?',
-
-								'Which passenger plane was never used as Air Force One?',
-
-								'For which of the following is the colloquial term "jumbo jet" often used?',
-
-								'What was the designation of the four-engine jet airliner being produced by Airbus prior to the A380?',
-
-								'Before Boeing introduced its long-haul 747-400 series, a smaller version of the 747 was built that had a range of almost 7,000 miles. What was the designation of this popular 'mini-jumbo'?
-',
-
-								'During the 1950s turboprop aircraft made up a large portion of the commercial airliner fleet. Which of the following was not a turboprop?',
-
-								'What was the designation of the airplane built by Boeing for service in the fabled Clipper fleet?'],
-
-		q1: ['A. Hawker Siddely',
-
-				 'B. Vickers',
-
-				 'C. Handley Page',
-
-				 'D. De Havelland'],
-
-		q2: ['A. DC-4',
-
-				 'B. DC-5',
-
-				 'C. DC-6',
-
-				 'D. DC-7'],
-
-		q3: ['A. Howard Hughes',
-
-				 'B. Glenn Martin',
-
-				 'C. Malcolm Loughhead',
-
-				 'D. Juan Trippe'],
-
-		q4: ['A. 340',
-
-				 'B. 880',
-
-				 'C. 990',
-
-				 'D. 240'],
-
-		q5: ['A. Douglas DC-6',
-
-				 'B. Boeing 707',
-
-				 'C. Lockheed Constellation',
-
-				 'D. Douglas DC-7'],
-
-		q6: ['A. Boeing 747',
-
-				 'B. Lockheed L-1011',
-
-				 'C. McDonnell Douglas MD-11',
-
-				 'D. Douglas DC-10'],
-
-		q7: ['A. A-340',
-
-				 'B. A-350',
-
-				 'C. A-320',
-
-				 'D. A-321'],
-
-		q8: ['A. 747-250',
-
-				 'B. 747-SB',
-
-				 'C. 747-SP',
-
-				 'D. 747-200'],
-
-		q9: ['A. Martin 404',
-
-				 'B. Vickers Viscount',
-
-				 'C. Lockheed Electra II',
-
-				 'D. Bristol Brittania'],
-
-		q10: ['A. 307',
-
-				  'B. 314',
-
-				  'C. 377',
-
-				  'D. 214']		 						
-
-	}
-
-*/
 
 var correct = 0;
 
@@ -192,13 +78,9 @@ var q1 = {
 
 				 'D. De Havelland'],
 
-	flags : [false, false, false, true],
-
-	answer : 'D. De Havelland'
+	flags : [false, false, false, true],	
 
 };
-
-
 
 var q2 = {
 
@@ -212,13 +94,9 @@ var q2 = {
 
 				 'D. DC-7'],
 
-	flags : [false, true, false, false],
-
-	answer : 'B. DC-5'
+	flags : [false, true, false, false],	
 
 };
-
-
 
 var q3 = {
 
@@ -232,13 +110,9 @@ var q3 = {
 
 	'D. Juan Trippe'],
 
-	flags : [true, false, false, false],
-
-	answer : 'A. Howard Hughes'
+	flags : [true, false, false, false],	
 
 };
-
-
 
 var q4 = {
 
@@ -252,13 +126,9 @@ var q4 = {
 
 	'D. 240'],
 
-	flags : [false, false, true, false],
-
-	answer : 'C. 990'
+	flags : [false, false, true, false],	
 
 };
-
-
 
 var q5 = {
 
@@ -273,12 +143,8 @@ var q5 = {
 	'D. Douglas DC-7'],
 
 	flags : [false, false, false, true],
-
-	answer : 'D. Douglas DC-7'
-
+	
 };
-
-
 
 var q6 = {
 
@@ -291,13 +157,10 @@ var q6 = {
 	'C. McDonnell Douglas MD-11',
 
 	'D. Douglas DC-10'],
+
 	flags : [true, false, false, false],
-
-	answer : 'A. Boeing 747'
-
+	
 };
-
-
 
 var q7 = {
 
@@ -311,13 +174,9 @@ var q7 = {
 
 	'D. A-321'],
 
-	flags : [true, false, false, false],
-
-	answer : 'A. A-340'
+	flags : [true, false, false, false],	
 
 };
-
-
 
 var q8 = {
 
@@ -331,13 +190,10 @@ var q8 = {
 	'C. 747-SP',
 
 	'D. 747-200'],
+
 	flags : [false, false, true, false],
-
-	answer : 'C. 747-SP'
-
+	
 };
-
-
 
 var q9 = {
 
@@ -351,13 +207,9 @@ var q9 = {
 
 	'D. Bristol Brittania'],
 
-	flags : [true, false, false, false],
-
-	answer : 'A. Martin 404'
+	flags : [true, false, false, false],	
 
 };
-
-
 
 var q10 = {
 
@@ -371,17 +223,11 @@ var q10 = {
 
 	'D. 214'],	
 
-	flags : [false, true, false, false],
-
-	answer : 'B. 314'
+	flags : [false, true, false, false],	
 
 }
 
-
-
 var questionArray = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
-
-
 
 function loadQuestion(questionSelection) {
 
@@ -399,23 +245,7 @@ function loadQuestion(questionSelection) {
 
   $("#buttonD").text(questionArray[questionSelection].possibleAnswers[3]).show();
 
-//  getAnswer();  
-
-//  nextQuestion(index);
-
 }
-
-
-
-//function nextQuestion() {
-
-//	index = index++;
-
-//	console.log(index);
-
-//}
-
-
 
 function setup() {
 
@@ -433,17 +263,11 @@ function setup() {
 
 	});
 
-}		
-
-
+}	
 
 function getAnswer() {
 
-
-
-//  nextQuestion();
-
-	$('.answerchoice').on('click', function() {
+	$('.answer').on('click', function() {
 
 	  console.log('alert', index);
 
@@ -467,31 +291,21 @@ function getAnswer() {
 
 }
 
-
-
 function answerCorrect() {
 
 	correct++;
 
-	alert("Correct!");
-
-	console.log("correct");
-
+	alert("Yes!");
+	
 }
-
-
 
 function answerWrong() {
 
 	wrong++;
 
-	alert("Incorrect!");
-
-	console.log("wrong");
+	alert("No!");	
 
 }
-
-
 
 function showScore() {
 
@@ -505,62 +319,13 @@ function showScore() {
 
 	$('.timer').empty();
 
-
-
 }
-
-//		for (var i=0; i<questionArray.length; i++) {
-
-//			$('.question').append('<p>'+questionArray[i].question+'</p>');
-
-//			for (var j=0; j<questionArray[i].possibleAnswers.length; j++) {
-
-//				$('.answers').append('<span><button id="possibleAnswer">' + questionArray[i].possibleAnswers[j]+ '</button></span>');
-
-//			}
-
-//			$('#possibleAnswers').on('click', function() {
-
-
-
-
-
-//		console.log("click");
-
-//		countdownTimer.start();
-
-//		for (var i = 0; i < questionArray.length; i++) {
-
-//			console.log(i);
-
-
-
-//			$('.timer').html('<h3>'+countdownTimer.time + ' seconds remaining</h3>');
-
-//			$('.question').html(questionArray[i].question);
-
-//			while (countdownTimer != 0) {
-
-
-
-//			}
-
-		
-
-//	});
-
-//	$('#startButton').click(countdownTimer.start);
-
-
-
-//}
 
 setup();
 
-$('.answerchoice').on('click', function() {
+$('.answer').on('click', function() {
 
- console.log($(this));
-
+ 
  if(this.id == 'buttonA') {
 
  	var answerChosen = 'A';
@@ -619,8 +384,6 @@ if ((answerChosen == 'D') && (questionArray[index].flags[3] == true)) {
 
  }
 
-
-
  $(".question").text('');
 
  $("#buttonA").text('');
@@ -639,18 +402,12 @@ if ((answerChosen == 'D') && (questionArray[index].flags[3] == true)) {
 
  } else {
 
- 	$(".answerchoice").hide();
+ 	$(".answer").hide();
 
  	showScore();
 
  }
 
 });
-
-
-
-
-
-//	$('#start').click(countdownTimer.start);
 
 });
